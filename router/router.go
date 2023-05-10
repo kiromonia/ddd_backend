@@ -29,7 +29,7 @@ func NewRouter(uc controller.IUserController, tc controller.ITaskController) *ec
 		//CookieMaxAge:   60,
 	}))
 	e.POST("/signup", uc.SignUp)
-	e.POST("/login", uc.Login)
+	e.POST("/login", uc.LogIn)
 	e.POST("/logout", uc.LogOut)
 	e.GET("/csrf", uc.CsrfToken)
 	t := e.Group("/tasks")
